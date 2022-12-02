@@ -1,5 +1,5 @@
 import React from 'react'
-
+import "./Nabvar.css"
 const Nabvar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
@@ -33,7 +33,8 @@ const Nabvar = () => {
       </ul>
       <form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
+        <button className="btn btn-outline-success" type="submit"><ion-icon name="cart-outline"></ion-icon></button>
+        
       </form>
     </div>
   </div>
