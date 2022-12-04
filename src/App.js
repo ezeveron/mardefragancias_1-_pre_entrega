@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar/Nabvar';
+import Card from './Components/Card/Card';
+import Main from './Components/Main/Main';
+
 
 function App() {
   const cards = [
@@ -20,11 +23,26 @@ function App() {
   
 
   return (
-    <header>
-      <Navbar/>
-      
-    </header>
-    
+    <div>
+      <header>
+        <Navbar/>
+        
+      </header>
+      <Main>
+        <div className=''>
+          {cards.map(({titulo,importe,contenido,img},index)=>(
+            <Card
+            key={index}
+            titulo={titulo}
+            importe={importe}
+            contenido={contenido}
+            img={img}
+            />
+          ))}
+        </div>
+      </Main>
+    </div> 
+   
       
     
   );
