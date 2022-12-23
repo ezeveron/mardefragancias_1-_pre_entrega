@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 import "./Nabvar.css"
 const Nabvar = () => {
   return (
@@ -10,17 +11,18 @@ const Nabvar = () => {
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li></li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Inicio</a>
+        <NavLink to='/' className="nav-link active" aria-current="page" href="#">Inicio</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Productos</a>
+          <NavLink to='/Item' className="nav-link active" aria-current="page" href="#">Productos</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Novedades</a>
+          <NavLink to='/ItemDetailsContainer' className="nav-link active" aria-current="page" href="#">Novedades</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Contactos</a>
+          <NavLink to='/Checkout' className="nav-link active" aria-current="page" href="#">Contactos</NavLink>
         </li>
       </ul>
       <form className="d-flex" role="search">

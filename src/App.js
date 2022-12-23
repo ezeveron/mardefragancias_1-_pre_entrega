@@ -3,46 +3,28 @@ import './App.css';
 import Navbar from './Components/Navbar/Nabvar';
 import Card from './Components/Card/Card';
 import Main from './Components/Main/Main';
+import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom'
+import ItemListConteiner from './Components/ItemListContainer/ItemListConteiner';
+import Item from './Components/Item/Item';
 
 
 function App() {
-  const cards = [
-    {
-      titulo:"Olymphea Intense",
-     importe:4250,
-     contenido:"Envase de 100 ml.",
-     img:"https://mardefraganciasbs.com.ar/images/olimpheaintensemujer.jpeg"
-    },
-     {
-      titulo:"My Way",
-      importe:4000,
-      contenido:"Envase de 100 ml.",
-      img:"https://mardefraganciasbs.com.ar/images/miway.jpg"
-     }
-  ]
-  
+
 
   return (
-    <div>
-      <header>
+    <Router>
         <Navbar/>
-        
-      </header>
-      <Main>
-        <div className=''>
-          {cards.map(({titulo,importe,contenido,img},index)=>(
-            <Card
-            key={index}
-            titulo={titulo}
-            importe={importe}
-            contenido={contenido}
-            img={img}
-            />
-          ))}
-        </div>
-      </Main>
-    </div> 
-   
+        <h1>Bienvenido a la Pagina Principal</h1>
+        <Routes>
+          
+          <Route path='/' element={<ItemListConteiner/>}/>
+          <Route path='/Card' element={<Card/>}/>
+
+          
+       </Routes>
+    </Router>
+
+
       
     
   );
